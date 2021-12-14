@@ -117,7 +117,7 @@ Dentro do webpack.config  colocamos a importação do plugin:
 const HtmlWebpackPlugin = require ('html-webpack-plugin')
 
 indicamos uma variável plugins dentro do mesmo arquivo:
-pugins: [
+plugins: [
        new HtmlWebpackPlugin({
        template: path.resolve(__dirname, "public", "index.html")
 ]
@@ -127,7 +127,7 @@ yarn webpack (salvar)
 Será criado um arquivo index.html dentro da pasta dist
 
 Automatizando o salvamento (yarn webpack):
-instarlar a bib: yarn add webpack-dev-server -D
+instalar a bib: yarn add webpack-dev-server -D
 
 dentro do webpack.config, criar outra propriedade dentro do objeto:
 devServer: {
@@ -136,7 +136,7 @@ devServer: {
 
 executar yarn webpack serve
 
-Agora, todas as "atualizações" feitas nos arquivos dentro da pasta src estarão sendo salvas instantanemaente ao salvar o próprio arquivo.
+Agora, todas as "atualizações" feitas nos arquivos dentro da pasta src estarão sendo salvas instantaneamente ao salvar o próprio arquivo.
 Para visualiza, utilizaremos a porta criada. Geralmente http://localhost:8080/
 
 Source Maps 
@@ -148,7 +148,7 @@ devtool: 'eval-source-map', // temos alguns modos, mas para ambiente de desenvol
 Criando um if para informar quando estamos em dev ou prd:
 criamos uma variável: const isDevelopment = process.env.NODE_ENV !== 'production';
 
-dentro do moudule alteramos:
+dentro do module alteramos:
 module.exports = {
     mode: isDevelopment ? 'development' : 'production',
     devtool: isDevelopment ? 'eval-source-map' : 'source-map',

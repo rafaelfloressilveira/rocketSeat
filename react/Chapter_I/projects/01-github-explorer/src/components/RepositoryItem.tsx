@@ -1,4 +1,12 @@
-export function RepositoryItem(props) {
+interface RepositoryItemProps { // Por convenção colocamos desta maneira
+    repository: {
+        name: string;
+        description: string;
+        html_url: string;
+    }
+}
+
+export function RepositoryItem(props: RepositoryItemProps ) {
     return (
     <li>
         <strong>{props.repository/*?*/.name /* ?? 'Título inválido'*/} </strong>
