@@ -1,0 +1,32 @@
+section.repository-list {
+    margin: 25px;
+
+    h1 {
+        margin-bottom: 22px;
+    }
+
+    ul {
+        list-style: none;
+        
+        li {
+            color: rgb(202, 48, 48);
+            & + li {
+                margin-top: 25px;
+                
+            }
+
+        p {
+           font-size: 18px;
+           color: rgb(139, 70, 139);
+           margin-top: 8px; 
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #8257e6;
+        }
+
+        }
+    }
+}
